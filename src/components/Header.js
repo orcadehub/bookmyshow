@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
@@ -76,7 +76,7 @@ const Header = () => {
                   <button className="dropdown-item">Settings</button>
                 </li>
                 <li>
-                  <button className="dropdown-item">My Tickets</button>
+                  <button className="dropdown-item" onClick={()=>navigate('/my-tickets')}>My Tickets</button>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
@@ -100,40 +100,40 @@ const Header = () => {
         <div className="d-flex justify-content-between">
           {/* Left Menu Links */}
           <div className="d-flex gap-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <Link to="/movies" className="text-decoration-none text-dark">
               Movies
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/streams" className="text-decoration-none text-dark">
               Stream
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/events" className="text-decoration-none text-dark">
               Events
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/plays" className="text-decoration-none text-dark">
               Plays
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/sports" className="text-decoration-none text-dark">
               Sports
-            </a>
+            </Link>
           </div>
 
           {/* Right Menu Links */}
           <div className="d-flex gap-4">
-            <a href="#" className="text-decoration-none text-dark">
+            <Link to="/buzz" className="text-decoration-none text-dark">
               Buzz
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/corporates" className="text-decoration-none text-dark">
               Corporates
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/offers" className="text-decoration-none text-dark">
               Offers
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/gifts" className="text-decoration-none text-dark">
               Gift Cards
-            </a>
-            <a href="#" className="text-decoration-none text-dark">
+            </Link>
+            <Link to="/help" className="text-decoration-none text-dark">
               Help
-            </a>
+            </Link>
           </div>
         </div>
       </div>

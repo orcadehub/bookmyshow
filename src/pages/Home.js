@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Slider from "../components/Slider";
+import SectionsDisplay from "../components/SectionsDisplay";
 
 function Home() {
   return (
     <div>
-      <h1>This is Home page</h1>
+      <Slider />
+      <SectionsDisplay />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
