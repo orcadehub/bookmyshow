@@ -19,11 +19,11 @@ const Footer = () => {
           <div className="col-md-3 mb-4">
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className="text-white text-decoration-none">Movies</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Events</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Plays</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Sports</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Offers</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Movies</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Events</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Plays</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Sports</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Offers</a></li>
             </ul>
           </div>
 
@@ -31,11 +31,11 @@ const Footer = () => {
           <div className="col-md-3 mb-4">
             <h5>Support</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className="text-white text-decoration-none">Help Center</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="#" className="text-white text-decoration-none">FAQs</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Terms & Conditions</a></li>
-              <li><a href="#" className="text-white text-decoration-none">Privacy Policy</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Help Center</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Contact Us</a></li>
+              <li><a href="/" className="text-white text-decoration-none">FAQs</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Terms & Conditions</a></li>
+              <li><a href="/" className="text-white text-decoration-none">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -43,10 +43,10 @@ const Footer = () => {
           <div className="col-md-3 mb-4">
             <h5>Connect With Us</h5>
             <div className="d-flex gap-3 mb-2">
-              <a href="#" className="text-white"><i className="bi bi-facebook"></i></a>
-              <a href="#" className="text-white"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="text-white"><i className="bi bi-twitter-x"></i></a>
-              <a href="#" className="text-white"><i className="bi bi-youtube"></i></a>
+              <a href="/" className="text-white"><i className="bi bi-facebook"></i></a>
+              <a href="/" className="text-white"><i className="bi bi-instagram"></i></a>
+              <a href="/" className="text-white"><i className="bi bi-twitter-x"></i></a>
+              <a href="/" className="text-white"><i className="bi bi-youtube"></i></a>
             </div>
             <p>Email: support@bookyshow.com</p>
             <p>Phone: +91 98765 43210</p>

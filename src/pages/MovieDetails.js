@@ -21,7 +21,6 @@ function MovieDetails() {
 
   const handleBookNow = () => {
     const loginStatus = localStorage.getItem("isLoggedIn");
-    const users = JSON.parse(localStorage.getItem("users")) || [];
 
     if (!loginStatus) {
       alert("❌ You must be logged in to book tickets.");
