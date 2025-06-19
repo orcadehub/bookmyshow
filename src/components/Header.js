@@ -6,10 +6,43 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Header = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userCity, setUserCity] = useState("");
+  const [locationOptions, setLocationOptions] = useState([
+    "Hyderabad",
+    "Chennai",
+    "Bangalore",
+  ]);
 
   useEffect(() => {
     const loginStatus = localStorage.getItem("isLoggedIn");
     setIsLoggedIn(loginStatus === "true");
+  }, []);
+
+  useEffect(() => {
+    // Ask for user's location
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          // Use Nominatim to reverse geocode
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+          );
+          const data = await res.json();
+          const city =
+            data.address.city || data.address.town || data.address.village;
+          if (city && !locationOptions.includes(city)) {
+            setLocationOptions((prev) => [city, ...prev]);
+          }
+          setUserCity(city);
+        } catch (err) {
+          console.error("Failed to fetch location:", err);
+        }
+      },
+      (error) => {
+        console.error("Geolocation permission denied or error:", error);
+      }
+    );
   }, []);
 
   const handleLogout = () => {
@@ -48,10 +81,15 @@ const Header = () => {
           {/* Right Side */}
           <div className="collapse navbar-collapse" id="navbarContent">
             <div className="ms-auto d-flex flex-column flex-lg-row align-items-lg-center gap-2">
-              <select className="form-select form-select-sm w-auto">
-                <option>Hyderabad</option>
-                <option>Chennai</option>
-                <option>Bangalore</option>
+              <select
+                className="form-select form-select-sm w-auto"
+                value={userCity}
+              >
+                {locationOptions.map((city, index) => (
+                  <option key={index} value={city}>
+                    {city}
+                  </option>
+                ))}
               </select>
 
               {!isLoggedIn ? (
